@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./../../../CSE-Semester-2/Web Design/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = [
+        {
+          Name: "Lorena",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/106.jpg",
+          Email: "Cathy60@gmail.com",
+          branch: "Enhanced",
+          Phone: "274-404-6749 x9574",
+          id: "1",
+        },
+        {
+          Name: "Kylie",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/91.jpg",
+          Email: "Carter19@hotmail.com",
+          branch: "newton",
+          Phone: "357-706-6188 x9809",
+          id: "2",
+        },
+        {
+          Name: "Eugenia",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/756.jpg",
+          Email: "Andre_Kulas0@gmail.com",
+          branch: "bus",
+          Phone: "(398) 255-0462 x989",
+          id: "3",
+        },
+        {
+          Name: "Jean",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/578.jpg",
+          Email: "Sandra.Roberts86@yahoo.com",
+          branch: "structure",
+          Phone: "1-744-665-9790 x09366",
+          id: "4",
+        },
+        {
+          Name: "Milford",
+          avatar:
+            "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/209.jpg",
+          Email: "Kamron63@yahoo.com",
+          branch: "female",
+          Phone: "552.769.2372 x1116",
+          id: "5",
+        },
+      ];
+
+      document.write("<table class=''>")
+        document.write("<tbody>")
+            document.write("<tr>")
+            for (i = 0; i < a.length; i++) {
+                document.write("<td>")
+        document.write("<div class='card ' style='width: 18rem;'>");
+        document.write("<img src='" + a[i].avatar + "' class='card-img-top' >");
+        document.write("<div class='card-body'>");
+        document.write("<h5 class='card-title'>" + a[i].Name + "</h5>");
+        document.write("<p class='card-text'>" + a[i].Email + "</p>");
+        document.write("<p class='card-text'>" + a[i].branch + "</p>");
+        document.write("<p class='card-text'>" + a[i].Phone + "</p>");
+        document.write("<a href='#' class='btn btn-primary'>Go somewhere</a>");
+        document.write("</div>");
+        document.write("</div>");
+        document.write("</div>");
+        document.write("</div>");
+        document.write("</div>");
+        document.write("</td>")
+    }
+    document.write("</tbody>")
+    document.write("</table>")
+    </script>
+  </body>
+</html>
