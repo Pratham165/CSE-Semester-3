@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        var a = parseInt(prompt("Enter number:"));
+        var ones = ['','one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+        var tens = ['','','twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+        var teens = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+        var hundreds = ['', 'hundred'];
+
+        // if(n===null||n===''){
+        //     document.write("Please enter the number..")
+        // }
+         if (a < 0 || a > 999) {
+            document.write("out of range");
+        } else if (a < 10) {
+            document.write(ones[a]);
+        } else if (a < 20) {
+            document.write(teens[a - 11]);
+        } else if (a < 100) {
+            document.write(tens[parseInt((a - 20) / 10)] + (a % 10 != 0 ? ' ' + ones[a % 10] : ''));
+        } else if (a < 1000) {
+            document.write(ones[parseInt(a / 100)] + ' ' + hundreds[0] + (a % 100 != 0 ? ' ' + range(a % 100) : ''));
+        } else {
+            
+        } 
+    </script>
+</body>
+</html>
