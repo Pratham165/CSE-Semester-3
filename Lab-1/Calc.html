@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc</title>
+  </head>
+  <body>
+    <script>
+      o = prompt("Select the operator from-'+','-','*','/'");
+      let a = parseInt(prompt("Enter number 1:"));
+      let b = parseInt(prompt("Enter number 2:"));
+    
+      if(o == '+'){
+          alert("Answer of addition is:"+(a+b));
+      }
+          else if(o=='-')
+          {
+            alert("Answer of subtraction is:"+(a-b));
+        }
+        else if(o=='*')
+          {
+            alert("Answer of multiplication is:"+(a*b));
+        }
+        else if(o=='/')
+          {
+            if (b==0) {
+                alert("Not defined");
+            }
+            else{
+                alert("Answer of division is:"+(a/b));
+            }
+        }
+    else{
+        alert("Not a valid operator");
+    }
+
+
+    </script>
+  </body>
+</html>
