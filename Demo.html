@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #TextB,#btn{
+            float: left;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="TextB">
+        <input type="text"/>
+    </div>
+    <div class="btn">
+        <button onclick="AddStudent()">Add</button>
+    </div>
+    <div id="student-table"></div>
+    <script>
+        var Student = ['Pratham','Modi','CSE'];
+        var StringStudent = "";
+
+        function AddStudent(){
+            var name = document.getElementById("TextB").getElementsByTagName("input")[0].value
+            Student.push(name)
+            DisplayStudent(Student)
+        }
+        function DeleteStudent(i){
+            Student.splice(i,1)
+            DisplayStudent(Student)
+        }
+
+        function DisplayStudent(Student){
+            StringStudent = "<table border='1'>"
+            for(i=0;i<Student.length;i++){
+                StringStudent+= "<tr>"
+                StringStudent+= "<td>"+Student[i]+"</td>"
+                StringStudent+= "<td><button onclick='DeleteStudent("+i+")'>Delete</button></td>"
+                StringStudent+= "</tr>"
+            }
+            StringStudent+= "</table>"
+            document.getElementById("student-table").innerHTML = StringStudent
+        }
+        DisplayStudent(Student)
+    </script>
+</body>
+</html>
