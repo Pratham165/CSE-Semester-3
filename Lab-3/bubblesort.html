@@ -1,0 +1,29 @@
+<!-- WAP to read an array from the user and sort them using bubble sort -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        let n = parseInt(prompt("Enter number of elements in array"))
+        let a = [n]
+        for(let i=0;i<n;i++){
+            a[i] = parseInt(prompt("Enter number"))
+        }
+        for(let i=0;i<n-1;i++){
+            for(let j=i+1;j<n-1;j++){
+                if(a[i]>a[j]){
+                    let temp = a[i]
+                    a[i]=a[j]
+                    a[j]=temp
+                }
+            }
+        }
+        document.write(a)
+
+    </script>
+ </body>
+ </html>

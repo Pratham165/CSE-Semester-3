@@ -1,0 +1,23 @@
+<!-- Demonstrate the use of array to ƒind maximum number -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum number from array</title>
+ </head>
+ <body>
+    <script>
+        let n = parseInt(prompt("Enter number of elements in array"))
+        let a = [n]
+        let max = a[0]
+        for(let i=0;i<n;i++){
+            a[i] = parseInt(prompt("Enter number"))
+            if(a[i]>max){
+                max = a[i]
+            }
+        }
+        document.write("Maximum number is "+max)
+    </script>
+ </body>
+ </html>
