@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphical Calculator</title>
+    <link
+      rel="stylesheet"
+      href="./../../../CSE-Semester-2/Web Design/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <input type="text" id="result"/>
+          <button  class="btn btn-danger" value="Val"onclick="clr()">Clear</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" onclick="disp('1')">1</button>
+            <button type="button" class="btn btn-primary" onclick="disp('2')">2</button>
+            <button type="button" class="btn btn-primary" onclick="disp('3')">3</button>
+            <button type="button" class="btn btn-primary" onclick="disp('/')">/</button>
+    </div>
+    </div>
+</br>
+    <div class="row">
+        <div class="col-3">
+            <button type="button" class="btn btn-primary" onclick="disp('4')">4</button>
+            <button type="button" class="btn btn-primary" onclick="disp('5')">5</button>
+            <button type="button" class="btn btn-primary" onclick="disp('6')">6</button>
+            <button type="button" class="btn btn-primary" onclick="disp('*')">*</button>
+    </div>
+    </div>
+</br>
+<div class="row">
+    <div class="col-3">
+        <button type="button" class="btn btn-primary" onclick="disp('7')">7</button>
+        <button type="button" class="btn btn-primary" onclick="disp('8')">8</button>
+        <button type="button" class="btn btn-primary" onclick="disp('9')">9</button>
+        <button type="button" class="btn btn-primary" onclick="disp('-')">-</button>
+</div>
+</div>
+</br>
+<div class="row">
+    <div class="col-3">
+        <button type="button" class="btn btn-primary" onclick="disp('0')">0</button>
+        <button type="button" class="btn btn-primary" onclick="disp('.')">.</button>
+        <button type="button" class="btn btn-primary" onclick="solve()">=</button>
+        <button type="button" class="btn btn-primary" onclick="disp('+')">+</button>
+</div>
+</div>
+    <script>
+      function disp(val) {
+        pattern = "^[a-zA-Z]";
+
+			regexp = new RegExp(pattern);
+
+			if(regexp.test(name)){
+				document.getElementById('errMsg').innerHTML = "Invalid"
+			}
+			else{
+                document.getElementById("result").value += val; 
+			}  
+      } 
+
+      function solve() {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = y
+      }
+
+      function clr() {
+  document.getElementById("result").value = "";
+}
+    </script>
+  </body>
+</html>

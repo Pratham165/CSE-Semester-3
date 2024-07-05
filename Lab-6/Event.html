@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onClick()">Click</button>
+    <button ondblclick="onDblClick()">Double Click</button>
+    <button onmousedown="onMouseDown()">Mouse Down</button>
+    <button onmouseup="onMouseUp()">Mouse Up</button>
+    <button onmouseout="onMouseOut()">Mouse Out</button>
+    <button onmouseover="onMouseOver()">Mouse Over</button>
+    <button onmousemove="onMouseMove()">Mouse Move</button>
+    <button oncontextmenu="onContextMenu()">Right Click</button>
+    
+    <script>
+        function onClick(){
+            alert("Double Clicked")
+        }
+        function onDblClick(){
+            alert("double clicked")
+        }
+        function onMouseDown(){
+            alert("mouse down");
+        }
+        function onMouseOut(){
+            alert("mouse out");
+        }
+        onMouseOver=() => {
+            alert("mouse over");
+        }
+        onMouseMove=() => {
+            alert("mouse move");
+        }
+        onContextMenu=() => {
+            alert("right click");
+        }
+    </script>
+</body>
+</html>
