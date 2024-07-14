@@ -1,7 +1,4 @@
 import java.util.Scanner;
-/**
- * Numbers
- */
 public class Numbers {
 
     public static void main(String[] args) {
