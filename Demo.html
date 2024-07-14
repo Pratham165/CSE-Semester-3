@@ -20,11 +20,11 @@
     </div>
     <div id="student-table"></div>
     <script>
-        var Student = ['Pratham','Modi','CSE'];
+        var Student = [];
         var StringStudent = "";
 
         function AddStudent(){
-            var name = document.getElementById("TextB").getElementsByTagName("input")[0].value
+            var name = document.getElementsByTagName("input")[0].value
             Student.push(name)
             DisplayStudent(Student)
         }
@@ -33,12 +33,21 @@
             DisplayStudent(Student)
         }
 
+        function EditStudent(i){
+            var name = document.getElementsByTagName("input")[0].value
+            Student[i] = name;
+            DisplayStudent(Student)
+            document.getElementById('btn').value = 'Edit'
+        }
+
+
         function DisplayStudent(Student){
             StringStudent = "<table border='1'>"
             for(i=0;i<Student.length;i++){
                 StringStudent+= "<tr>"
                 StringStudent+= "<td>"+Student[i]+"</td>"
                 StringStudent+= "<td><button onclick='DeleteStudent("+i+")'>Delete</button></td>"
+                StringStudent+= "<td><button onclick='EditStudent("+i+")'>Edit</button></td>"
                 StringStudent+= "</tr>"
             }
             StringStudent+= "</table>"
